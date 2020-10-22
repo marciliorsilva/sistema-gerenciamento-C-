@@ -1,0 +1,6 @@
+﻿<Window x:Class="Sistema.ImpresaEntradaOs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ImpresaEntradaOs" Height="416" Width="615">
+    <Grid></Grid>
+</Window>

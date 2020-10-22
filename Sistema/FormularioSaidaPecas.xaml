@@ -1,0 +1,31 @@
+﻿<Window x:Class="Sistema.FormularioSaidaPecas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="FormularioSaidaPecas" Height="319" Width="476" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DatePicker HorizontalAlignment="Left" Margin="12,24,0,0" Name="dpSaida" Width="146" Height="21" VerticalAlignment="Top" />
+        <Label Content="Dt. de Saída" Height="28" HorizontalAlignment="Left" Margin="8,3,0,0" Name="label1" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Stretch" Margin="11,67,6,0" Name="cbPeca" VerticalAlignment="Top" SelectionChanged="cbPeca_SelectionChanged" />
+        <Label Content="Peça" Height="28" HorizontalAlignment="Left" Margin="7,46,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="13,115,0,0" Name="qtdEstoque" VerticalAlignment="Top" Width="192" IsEnabled="False"  />
+        <ComboBox Height="23" HorizontalAlignment="Stretch" Margin="14,162,6,0" Name="cbCliente" VerticalAlignment="Top" SelectionChanged="cbCliente_SelectionChanged" />
+        <Label Content="Cliente" Height="28" HorizontalAlignment="Left" Margin="10,141,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="Quantidade em Estoque" Height="28" HorizontalAlignment="Left" Margin="9,95,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="213,116,6,0" Name="txtQtdeSaida" VerticalAlignment="Top" />
+        <Label Content="Quantidade para Saída" Height="28" HorizontalAlignment="Left" Margin="207,96,0,0" Name="label5" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="15,212,7,0" Name="txtObservacao" VerticalAlignment="Top" />
+        <Label Content="Observação" Height="28" HorizontalAlignment="Left" Margin="11,191,0,0" Name="label7" VerticalAlignment="Top" />
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Stretch" Margin="372,0,7,12" Name="btCancelar" VerticalAlignment="Bottom" Width="75" />
+        <Button Content="Cadastrar" Height="23" HorizontalAlignment="Stretch" Margin="213,0,166,12" Name="btCadastrar" VerticalAlignment="Bottom" Width="75" Click="btCadastrar_Click" />
+        <ComboBox Height="23" HorizontalAlignment="Stretch" Margin="169,24,6,0" Name="cbMotivo" VerticalAlignment="Top" >
+            <ComboBoxItem Content="Precaução" />
+            <ComboBoxItem Content="Troca" />
+            <ComboBoxItem Content="Defeito" />
+            <ComboBoxItem Content="Venda" />
+            <ComboBoxItem Content="Teste" />
+        </ComboBox>
+        <Label Content="Motivo" Height="28" HorizontalAlignment="Left" Margin="166,3,0,0" Name="label9" VerticalAlignment="Top" />
+        <Button Content="Repor no estoque" Height="23" HorizontalAlignment="Stretch" Margin="15,0,335,12" Name="reporEstoque" VerticalAlignment="Bottom" Opacity="0" Click="reporEstoque_Click" />
+        <Button Content="Editar" Height="23" HorizontalAlignment="Left" Margin="294,245,0,0" Name="btEditar" VerticalAlignment="Top" Width="75" Click="btEditar_Click" />
+    </Grid>
+</Window>

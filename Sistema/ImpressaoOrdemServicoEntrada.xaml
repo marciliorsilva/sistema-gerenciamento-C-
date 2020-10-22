@@ -1,0 +1,71 @@
+﻿<Window x:Class="Sistema.ImpressaoOrdemServicoEntrada"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ImpressaoOrdemServicoEntrada" Height="835" Width="838" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Height="747" HorizontalAlignment="Left" Margin="12,12,0,0" Name="impressao" VerticalAlignment="Top" Width="795">
+            <Rectangle Height="40" HorizontalAlignment="Left" Margin="463,161,0,0" Name="rectangle2" Stroke="Black" VerticalAlignment="Top" Width="196" />
+            <Rectangle Height="40" HorizontalAlignment="Left" Margin="12,161,0,0" Name="rectangle5" Stroke="Black" VerticalAlignment="Top" Width="453" />
+            <Rectangle Height="40" HorizontalAlignment="Left" Margin="658,161,0,0" Name="rectangle3" Stroke="Black" VerticalAlignment="Top" Width="99" />
+            <Rectangle Height="103" HorizontalAlignment="Left" Margin="658,59,0,0" Name="rectangle4" Stroke="Black" VerticalAlignment="Top" Width="99" />
+            <Rectangle Height="103" HorizontalAlignment="Left" Margin="12,59,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="745" />
+            <Rectangle Height="24" HorizontalAlignment="Left" Margin="12,213,0,0" Name="rectangle7" Stroke="Black" VerticalAlignment="Top" Width="181" />
+            <Rectangle Height="2" HorizontalAlignment="Left" Margin="12,235,0,0" Name="rectangle6" Stroke="Black" VerticalAlignment="Top" Width="745" />
+            <Rectangle Height="2" HorizontalAlignment="Left" Margin="16,435,0,0" Name="rectangle8" Stroke="Black" VerticalAlignment="Top" Width="741" />
+
+
+            <Image Height="86" HorizontalAlignment="Left" Margin="23,66,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="230" Source="/Sistema;component/Images/MH.png" />
+            <Label Content="Ordem de Serviço - Recibo de Entrada" Height="47" HorizontalAlignment="Left" Margin="189,14,0,0" Name="label1" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" FontFamily="Tahoma" />
+            <Label Content="Avenida Doutor Belmínio Correia - Novo do Carmelo - Nº 480 " Height="28" HorizontalAlignment="Left" Margin="12,159,0,0" Name="label2" VerticalAlignment="Top" FontWeight="Bold" FontSize="11" />
+            <Label Content="Telefone: 3102 - 2525 / 3118 - 2020" Height="28" HorizontalAlignment="Left" Margin="461,158,0,0" Name="label3" VerticalAlignment="Top" FontWeight="Bold" FontSize="11" />
+                     <Label Content="CNPJ: 16.100.905/0001-73" Height="28" HorizontalAlignment="Left" Margin="368,101,0,0" Name="label4" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" />
+            <Label Content="N° OS" Height="50" HorizontalAlignment="Left" Margin="667,59,0,0" Name="label5" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" />
+            <Label Content="DATA DE ENTRADA:" Height="28" HorizontalAlignment="Left" Margin="304,247,0,0" Name="label6" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="CLIENTE: " Height="28" HorizontalAlignment="Left" Margin="9,247,0,0" Name="label7" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="CPF / CNPJ:" Height="28" HorizontalAlignment="Left" Margin="9,281,0,0" Name="label8" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="RG / IE:" Height="28" HorizontalAlignment="Left" Margin="304,281,0,0" Name="label9" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="Email: suporte@mhacesso.com.br" Height="28" HorizontalAlignment="Left" Margin="462,175,0,0" Name="label10" VerticalAlignment="Top" FontWeight="Bold" FontSize="11" />
+            <Label Content="Soluções em Relogio de Ponto e Controle de Acesso" Height="28" HorizontalAlignment="Left" Margin="286,81,0,0" Name="label11" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" />
+            <Label Height="58" HorizontalAlignment="Left" Margin="668,98,0,0" Name="NumeroOS" VerticalAlignment="Top" FontSize="24" />
+            <Label Content="Técnico" Height="28" HorizontalAlignment="Left" Margin="679,155,0,0" Name="label13" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="669,173,0,0" Name="lbnomeTecnico" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="9,175,0,0" Name="label15" VerticalAlignment="Top" Content=" 3º Andar - Sala 303 Centro, Camaragibe - PE, 54759-000. Em cima ao Banco do Brasil." FontSize="11" Width="456" FontWeight="Bold" />
+                      <Label Content="INFORMAÇÕES DO CLIENTE" Height="28" HorizontalAlignment="Left" Margin="20,213,0,0" Name="label16" VerticalAlignment="Top" Width="170" FontWeight="Bold" />
+            <Label Content="ENDEREÇO:" Height="28" HorizontalAlignment="Left" Margin="10,315,0,0" Name="label18" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="BAIRRO:" Height="28" HorizontalAlignment="Left" Margin="9,347,0,0" Name="label19" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="CIDADE:" Height="28" HorizontalAlignment="Left" Margin="378,347,0,0" Name="label20" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="CEP:" Height="28" HorizontalAlignment="Left" Margin="379,315,0,0" Name="label21" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="TELEFONE:" Height="28" HorizontalAlignment="Left" Margin="10,378,0,0" Name="label22" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="E-MAIL:" Height="28" HorizontalAlignment="Left" Margin="380,378,0,0" Name="label23" VerticalAlignment="Top" FontWeight="Bold" />
+            <Rectangle Height="25" HorizontalAlignment="Left" Margin="16,412,0,0" Name="rectangle9" Stroke="Black" VerticalAlignment="Top" Width="107" />
+            <Label Content="EQUIPAMENTO" Height="28" HorizontalAlignment="Left" Margin="23,412,0,0" Name="label24" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="DESCRIÇÃO:" Height="28" HorizontalAlignment="Left" Margin="16,455,0,0" Name="label25" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="MODELO:" Height="28" HorizontalAlignment="Left" Margin="418,455,0,0" Name="label26" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="Nº SÉRIE:" Height="28" HorizontalAlignment="Left" Margin="218,455,0,0" Name="label27" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="MARCA:" Height="28" HorizontalAlignment="Left" Margin="584,455,0,0" Name="label28" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="- OBSERVAÇÃO" Height="28" HorizontalAlignment="Left" Margin="20,508,0,0" Name="label29" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Content="- DEFEITO" Height="28" HorizontalAlignment="Left" Margin="20,600,0,0" Name="label30" VerticalAlignment="Top" FontWeight="Bold" />
+            <Rectangle Height="2" HorizontalAlignment="Left" Margin="241,711,0,0" Name="rectangle10" Stroke="Black" VerticalAlignment="Top" Width="333" />
+            <Label Content="ASSINATURA DO CLIENTE" Height="28" HorizontalAlignment="Left" Margin="330,712,0,0" Name="label32" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="62,247,0,0" Name="lbcliente" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="422,247,0,0" Name="lbdtEntrada" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="79,282,0,0" Name="lbcpfCnpj" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="351,281,0,0" Name="lbrgIE" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="408,316,0,0" Name="lbcep" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="430,347,0,0" Name="lbcidade" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="80,315,0,0" Name="lbendereco" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="429,378,0,0" Name="lbemail" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="61,348,0,0" Name="lbbairro" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="73,378,0,0" Name="lbtelefone" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="474,453,0,0" Name="lbmodelo" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="274,454,0,0" Name="lbnSerie" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="636,455,0,0" Name="lbmarca" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="90,456,0,0" Name="lbequipamento" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="21,522,0,0" Name="lbobservacao" VerticalAlignment="Top" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="23,613,0,0" Name="lbdefeito" VerticalAlignment="Top" />
+            <Label Content="UF:" Height="28" HorizontalAlignment="Left" Margin="601,316,0,0" Name="label17" VerticalAlignment="Top" FontWeight="Bold" />
+            <Label Height="28" HorizontalAlignment="Left" Margin="623,316,0,0" Name="lbuf" VerticalAlignment="Top" />
+        </Grid>
+        <Button Content="Salvar" Height="23" HorizontalAlignment="Left" Margin="380,765,0,0" Name="btImprimir" VerticalAlignment="Top" Width="75" Click="btImprimir_Click" />
+    </Grid>
+</Window>

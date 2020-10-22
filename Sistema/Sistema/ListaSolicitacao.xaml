@@ -1,0 +1,30 @@
+﻿<Window x:Class="Sistema.ListaSolicitacao"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListaSolicitacao" Height="290" Width="547" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="138,12,0,0" Name="textBox1" VerticalAlignment="Top" Width="375" />
+        
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" />
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Left" Margin="438,221,0,0" Name="btCancelar" VerticalAlignment="Top" Width="75" Click="btCancelar_Click" />
+        <Button Content="Cadastrar Equipamentos" Height="23" HorizontalAlignment="Left" Margin="296,221,0,0" Name="btCadastrarEqpt" VerticalAlignment="Top" Width="136" IsEnabled="False" Click="btCadastrarEqpt_Click" />
+        <DataGrid AutoGenerateColumns="False" Background="#FFF0F0F0" Height="171" HorizontalAlignment="Left" ItemsSource="{Binding Path=entradaDataBinding}" Margin="12,41,0,0" Name="dtgEntrada" VerticalAlignment="Top" Width="501" Loaded="dtgEntrada_Loaded" SelectedCellsChanged="dtgEntrada_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Codigo}" Header="Codigo" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=NotaFiscal}" Header="Nota Fiscal" IsReadOnly="True" Width="75" />
+                <DataGridTextColumn Binding="{Binding Path=Data}" Header="Data da Solicitação" IsReadOnly="True" Width="115" />
+                <DataGridTextColumn Binding="{Binding Path=Fornecedor}" Header="Fornecedor" IsReadOnly="True" Width="85" />
+                <DataGridTextColumn Binding="{Binding Path=Equipamento}" Header="Equipamento" IsReadOnly="True" Width="102" />
+                <DataGridTextColumn Binding="{Binding Path=Quantidade}" Header="Quantidade" IsReadOnly="True" Width="152" />
+                <DataGridTextColumn Binding="{Binding Path=Observação}" Header="Observação" IsReadOnly="True" Width="152" />
+                <DataGridTextColumn Binding="{Binding Path=Situação}" Header="Situação" IsReadOnly="True" Width="152" />
+            </DataGrid.Columns>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+        </DataGrid>
+    </Grid>
+</Window>

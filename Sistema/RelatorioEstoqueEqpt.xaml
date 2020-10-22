@@ -1,0 +1,50 @@
+﻿<Window x:Class="Sistema.RelatorioEstoqueEqpt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MH acesso - GE1.0 - Historico do Estoque de Equipamento" Height="517" Width="656" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/Sistema;component/Images/icone.png">
+    <Grid>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,40,0,0" Name="cbTipo" VerticalAlignment="Top" SelectionChanged="cbTipo_SelectionChanged" Width="110">
+            <ComboBoxItem Content="Tipo" IsEnabled="False" IsSelected="True" />
+            <ComboBoxItem Content="Entrada" />
+            <ComboBoxItem Content="Saída" />
+        </ComboBox>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="128,40,0,0" Name="cbFiltro" VerticalAlignment="Top" Width="110" IsEnabled="False">
+            <ComboBoxItem Content="Tipo de Busca:" IsEnabled="False" IsSelected="True" />
+            
+        </ComboBox>
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="244,40,12,0" Name="txtPesquisa" VerticalAlignment="Top" TextChanged="txtPesquisa_TextChanged" />
+        <DataGrid AutoGenerateColumns="False" CanUserResizeRows="False" ItemsSource="{Binding Path=relatorioDataBinding}" Height="368" HorizontalAlignment="Stretch" Margin="12,71,12,0" Name="dtgRelatorioEqpt" VerticalAlignment="Top" SelectedCellsChanged="dtgRelatorioEqpt_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=codigo_estoque}" Header="Codigo" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=DataEntrada}" Header="Data de Entrada" IsReadOnly="True" Width="115"  Visibility="Hidden"/>
+                <DataGridTextColumn Binding="{Binding Path=fornecedor}" Header="Fornecedor" IsReadOnly="True" Width="115" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=equipamento}" Header="Equipamento" IsReadOnly="True" Width="100" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=nrSerie}" Header="Nº de Série" IsReadOnly="True" Width="115"  Visibility="Hidden"/>
+                <DataGridTextColumn Binding="{Binding Path=modelo}" Header="Modelo" IsReadOnly="True" Width="100" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=localizacao}" Header="Localização" IsReadOnly="True" Width="115" Visibility="Hidden"  />
+
+                <DataGridTextColumn Binding="{Binding Path=codigo_se}" Header="Codigo" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=DataSaida}" Header="Data de Saida" Width="100" IsReadOnly="True" Visibility="Hidden"  />
+                <DataGridTextColumn Binding="{Binding Path=descricao}" Header="Equipamento" Width="100" IsReadOnly="True" Visibility="Hidden"  />
+                <DataGridTextColumn Binding="{Binding Path=nrSerie}" Header="Nº de Série" Width="100" IsReadOnly="True" Visibility="Hidden"  />
+                <DataGridTextColumn Binding="{Binding Path=motivo}" Header="Motivo" Width="120" IsReadOnly="True" Visibility="Hidden"  />
+                <DataGridTextColumn Binding="{Binding Path=Nome}" Header="Cliente" Width="100" IsReadOnly="True" Visibility="Hidden"  />
+                <DataGridTextColumn Binding="{Binding Path=observacao}" Header="Observação" Width="120" IsReadOnly="True" Visibility="Hidden"  />
+                <DataGridTextColumn Binding="{Binding Path=Usuario}" Header="Usuário" Width="120" IsReadOnly="True" Visibility="Hidden"  />
+                <DataGridTextColumn Binding="{Binding Path=reposicao}" Header="Repôs ao Estoque" Width="130" IsReadOnly="True" Visibility="Hidden"  />
+
+            </DataGrid.Columns>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+            <DataGrid.RowBackground>
+                <SolidColorBrush />
+            </DataGrid.RowBackground>
+        </DataGrid>
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Right" Margin="0,0,12,12" Name="btCancelar" VerticalAlignment="Bottom" Width="75" Click="btCancelar_Click" />
+        <TextBlock Background="#FFFF9F07" FontFamily="Verdana" FontSize="16" Foreground="#FF2E2E2E" Height="22" HorizontalAlignment="Stretch" Name="textBlock1" Text=" Histórico do Estoque de Equipamento" VerticalAlignment="Top" />
+    </Grid>
+</Window>

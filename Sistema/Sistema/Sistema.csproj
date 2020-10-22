@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D68FC12F-6EAA-40A0-B25A-F0D59167D53D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema</RootNamespace>
+    <AssemblyName>Sistema</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddClienteEqptEstoque.xaml.cs">
+      <DependentUpon>AddClienteEqptEstoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarEqptCliente.xaml.cs">
+      <DependentUpon>AdicionarEqptCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento.xaml.cs">
+      <DependentUpon>Atendimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EstoquePecas.xaml.cs">
+      <DependentUpon>EstoquePecas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImpresaEntradaOs.xaml.cs">
+      <DependentUpon>ImpresaEntradaOs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IncluirConsultarEstoquePeca.xaml.cs">
+      <DependentUpon>IncluirConsultarEstoquePeca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IncluirListaSolicitacaoEstoque.xaml.cs">
+      <DependentUpon>IncluirListaSolicitacaoEstoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IncluirConsultarEstoque.xaml.cs">
+      <DependentUpon>IncluirConsultarEstoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListaConsultaEqptEstoque.xaml.cs">
+      <DependentUpon>ListaConsultaEqptEstoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListaConsultaPecasEstoque.xaml.cs">
+      <DependentUpon>ListaConsultaPecasEstoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListaSolicitacao.xaml.cs">
+      <DependentUpon>ListaSolicitacao.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddClienteEqptEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdicionarEqptCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Adm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Atendimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CategoriaEqpt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClienteConsulta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Adm.xaml.cs">
+      <DependentUpon>Adm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CategoriaEqpt.xaml.cs">
+      <DependentUpon>CategoriaEqpt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente.xaml.cs">
+      <DependentUpon>Cliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteConsulta.xaml.cs">
+      <DependentUpon>ClienteConsulta.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="EntradaEqpt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EntradaEqptConsulta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EnviarEqpt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Equipamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipamentoConsulta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Estoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EstoquePecas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImpresaEntradaOs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IncluirConsultarEstoquePeca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IncluirListaSolicitacaoEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fornecedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FornecedorConsulta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IncluirConsultarEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListaConsultaEqptEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListaConsultaPecasEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListaSolicitacao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NovoConsultarAtendimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrdemServico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrdemServicoEntrada.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pecas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntradaEqpt.xaml.cs">
+      <DependentUpon>EntradaEqpt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaEqptConsulta.xaml.cs">
+      <DependentUpon>EntradaEqptConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EnviarEqpt.xaml.cs">
+      <DependentUpon>EnviarEqpt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Equipamento.xaml.cs">
+      <DependentUpon>Equipamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipamentoConsulta.xaml.cs">
+      <DependentUpon>EquipamentoConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque.xaml.cs">
+      <DependentUpon>Estoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fornecedor.xaml.cs">
+      <DependentUpon>Fornecedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FornecedorConsulta.xaml.cs">
+      <DependentUpon>FornecedorConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NovoConsultarAtendimento.xaml.cs">
+      <DependentUpon>NovoConsultarAtendimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrdemServico.xaml.cs">
+      <DependentUpon>OrdemServico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrdemServicoEntrada.xaml.cs">
+      <DependentUpon>OrdemServicoEntrada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pecas.xaml.cs">
+      <DependentUpon>Pecas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

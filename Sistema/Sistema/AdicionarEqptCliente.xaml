@@ -1,0 +1,10 @@
+﻿<Window x:Class="Sistema.AdicionarEqptCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AdicionarEqptCliente" Height="83" Width="340" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="Adicionar do Estoque" Height="21" HorizontalAlignment="Left" Margin="10,12,0,0" Name="btAddEstoque" VerticalAlignment="Top" Width="126" FontSize="11" Click="btAddEstoque_Click" />
+        <Label Content="OU" Height="49" HorizontalAlignment="Left" Margin="140,4,0,0" Name="label1" VerticalAlignment="Top" Width="50" FontSize="20" />
+        <Button Content="Cadastrar Equipamento" Height="21" HorizontalAlignment="Left" Margin="184,12,0,0" Name="btNovoEqpt" VerticalAlignment="Top" Width="126" FontSize="11" Click="btNovoEqpt_Click" />
+    </Grid>
+</Window>

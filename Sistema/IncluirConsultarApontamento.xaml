@@ -1,0 +1,63 @@
+﻿<Window x:Class="Sistema.IncluirConsultarApontamento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="IncluirConsultarApontamento" Height="507" Width="542">
+    <Grid>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,46,0,0" Name="cbCliente" VerticalAlignment="Top" Width="225" SelectionChanged="cbCliente_SelectionChanged" />
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="243,46,0,0" Name="dtPeriodoInicial" VerticalAlignment="Top" Width="133" />
+        <TextBlock Background="#FFFF9F07" FontFamily="Verdana" FontSize="16" Foreground="#FF2E2E2E" Height="22" HorizontalAlignment="Stretch" Name="textBlock1" Text=" Apontamento | Incluir - Editar" VerticalAlignment="Top" />
+        <Label Content="Clientes" Height="28" HorizontalAlignment="Left" Margin="10,26,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Período Inicial" Height="28" HorizontalAlignment="Left" Margin="239,26,0,0" Name="label2" VerticalAlignment="Top" />
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="382,46,0,0" Name="dtPeriodoFinal" VerticalAlignment="Top" Width="131" />
+        <Label Content="Período Final" HorizontalAlignment="Left" Margin="377,26,0,0" Name="label3" Height="28" VerticalAlignment="Top" />
+        <DataGrid AutoGenerateColumns="False" Height="156" ItemsSource="{Binding Path=apontamentoDataBinding}" HorizontalAlignment="Left" Margin="12,75,0,0" Name="dtgApontFilial" VerticalAlignment="Top" Width="501" SelectedCellsChanged="dtgApontFilial_SelectedCellsChanged" SelectionChanged="dtgApontFilial_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Clientes" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <TextBlock Name="Cliente" Text="{Binding Path=Nome}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>                  
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Header="Tratado até" Width="150" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Name="dtTratamento" Text="{Binding Path=dtTratamento}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <DatePicker Name="dtTratamento" Text="{Binding Path=dtTratamento}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="" Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <Button Name="btCadastrar" Content="Cadastrar" Click="btCadastrar_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+            <DataGrid.RowBackground>
+                <SolidColorBrush />
+            </DataGrid.RowBackground>
+        </DataGrid>
+        <TextBox Height="68" HorizontalAlignment="Left" Margin="12,249,0,0" Name="txtObservacao" VerticalAlignment="Top" Width="501" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" />
+        <Label Content="Observações Gerais" Height="28" HorizontalAlignment="Left" Margin="10,227,0,0" Name="label4" VerticalAlignment="Top" />
+        <Grid Height="133" HorizontalAlignment="Left" Margin="16,325,0,0" Name="GridApontamento" VerticalAlignment="Top" Width="488">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Name="teste"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</Window>

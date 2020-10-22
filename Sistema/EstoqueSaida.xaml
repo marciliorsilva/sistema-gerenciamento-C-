@@ -1,0 +1,44 @@
+﻿<Window x:Class="Sistema.EstoqueSaida"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MH acesso - GE1.0 - Saída do Estoque de Equipamento | Dados Gerais" Height="323" Width="593" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/Sistema;component/Images/icone.png">
+    <Grid>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="93,37,0,0" Name="cbFiltro" VerticalAlignment="Top" Width="108">
+            <ComboBoxItem Content="Tipo de Busca:" IsEnabled="False" IsSelected="True" />
+            <ComboBoxItem Content="Data" />
+            <ComboBoxItem Content="Equipamento" />
+            <ComboBoxItem Content="Nº de Série" />
+            <ComboBoxItem Content="Motivo" />
+            <ComboBoxItem Content="Cliente" />
+            <ComboBoxItem Content="Usuario" />
+        </ComboBox>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="207,37,0,0" Name="txtPesquisa" VerticalAlignment="Top" Width="352" TextChanged="txtPesquisa_TextChanged" />
+        <DataGrid AutoGenerateColumns="False" CanUserResizeRows="False" ItemsSource="{Binding Path=saidaEstoqueDataBinding}" Height="210" Margin="93,64,0,0" Name="dtgSaidaEstoque" VerticalAlignment="Top" Width="466" HorizontalAlignment="Left" Background="#FFF0F0F0" Loaded="dtgSaidaEstoque_Loaded" SelectedCellsChanged="dtgSaidaEstoque_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=codigo_se}" Header="Codigo" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=DataSaida}" Header="Data de Saida" Width="100" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=descricao}" Header="Equipamento" Width="100" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=nrSerie}" Header="Nº de Série" Width="100" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=motivo}" Header="Motivo" Width="120" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=Nome}" Header="Cliente" Width="100" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=observacao}" Header="Observação" Width="120" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=Usuario}" Header="Usuário" Width="120" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=reposicao}" Header="Repôs ao Estoque" Width="130" IsReadOnly="True"  />
+
+            </DataGrid.Columns>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+            <DataGrid.RowBackground>
+                <SolidColorBrush />
+            </DataGrid.RowBackground>
+        </DataGrid>
+        <Button Content="Incluir" Height="23" HorizontalAlignment="Left" Margin="12,65,0,0" Name="btIncluir" VerticalAlignment="Top" Width="75" Click="btIncluir_Click" />
+        <Button Content="Consultar" Height="23" HorizontalAlignment="Left" Margin="12,94,0,0" Name="btConsultar" VerticalAlignment="Top" Width="75" Click="btConsultar_Click" IsEnabled="False" />
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Left" Margin="12,123,0,0" Name="btCancelar" VerticalAlignment="Top" Width="75" Click="btCancelar_Click" />
+        <TextBlock Background="#FFFF9F07" FontFamily="Verdana" FontSize="16" Foreground="#FF2E2E2E" Height="22" HorizontalAlignment="Stretch" Name="textBlock1" Text="  Saída do Estoque de Peças | Dados Gerais" VerticalAlignment="Top" />
+    </Grid>
+</Window>

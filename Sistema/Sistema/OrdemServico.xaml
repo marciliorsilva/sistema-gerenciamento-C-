@@ -1,0 +1,11 @@
+﻿<Window x:Class="Sistema.OrdemServico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OrdemServico" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="338" Width="434" SizeToContent="Manual">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" Margin="12,59,0,0" Name="dataGrid1" HorizontalAlignment="Left" Width="388" Height="200" VerticalAlignment="Top" />
+        <Button Content="Incluir" Margin="162,266,0,0" Name="btIncluir" Click="btIncluir_Click" HorizontalAlignment="Left" Width="75" Height="23" VerticalAlignment="Top" />
+        <Button Content="Button" Margin="243,266,0,0" Name="button2" HorizontalAlignment="Left" Width="75" Height="23" VerticalAlignment="Top" />
+        <Button Content="Button" Margin="324,266,0,0" Name="button3" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" />
+    </Grid>
+</Window>

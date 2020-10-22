@@ -1,0 +1,44 @@
+﻿<Window x:Class="Sistema.Atendimento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MH acesso - GE1.0 - Atendimento | Dados Gerais" Height="417" Width="522" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFE3E3E3" Icon="/Sistema;component/Images/icone.png">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" CanUserResizeRows="False" ItemsSource="{Binding Path=atendimentoDataBinding}" Height="309" HorizontalAlignment="Stretch" Margin="97,58,12,0" Name="dtgAtendimento" VerticalAlignment="Top" Loaded="dtgAtendimento_Loaded" SelectedCellsChanged="dtgAtendimento_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=codigo_atendimento}" Header="Codigo" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=DataEntrada2}" Header="Data" Width="100" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=horaEntrada}" Header="Hora" Width="70" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=Usuario}" Header="Atendido por" Width="110" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=cliente}" Header="Cliente" Width="110" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=motivo}" Header="Motivo" Width="100" IsReadOnly="True"  /> 
+                <DataGridTextColumn Binding="{Binding Path=descricao}" Header="Descricao do Atd." Width="110" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=situacao}" Header="Situação" Width="100" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=resolvidoPor}" Header="Resolvido Por" Width="100" IsReadOnly="True"  />
+
+
+            </DataGrid.Columns>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+            <DataGrid.RowBackground>
+                <SolidColorBrush />
+            </DataGrid.RowBackground>
+        </DataGrid>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="12,116,0,0" Name="btCancelar" Width="79" Height="23" VerticalAlignment="Top" Click="btCancelar_Click" />
+        <Button Content="Consultar" HorizontalAlignment="Left" Margin="12,87,0,0" Name="btConsultar" Width="79" Height="23" VerticalAlignment="Top" IsEnabled="False" Click="btConsultar_Click" />
+        <Button Content="Novo" HorizontalAlignment="Left" Margin="12,58,0,0" Name="btNovo" Click="btNovo_Click" Width="79" Height="23" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Stretch" Margin="96,29,284,0" Name="cbFiltro" VerticalAlignment="Top" Width="Auto" >
+            <ComboBoxItem Content="Tipo de Busca:" IsEnabled="False" IsSelected="True" />
+            <ComboBoxItem Content="Data" />
+            <ComboBoxItem Content="Cliente" />
+            <ComboBoxItem Content="Usuario" />
+            <ComboBoxItem Content="Motivo" />
+            
+        </ComboBox>
+        <TextBox Height="23" Margin="0,29,12,0" Name="txtPesquisa" VerticalAlignment="Top" HorizontalAlignment="Right" Width="266" TextChanged="txtPesquisa_TextChanged" />
+        <TextBlock Height="22" HorizontalAlignment="Stretch" Name="textBlock1" Text=" Atendimento | Dados Gerais" VerticalAlignment="Top" Width="Auto" FontSize="16" Background="#FFFF9F07" FontFamily="Verdana" Foreground="#FF2E2E2E" />
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+﻿<Window x:Class="Sistema.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MH acesso - GE1.0 - Login" Height="300" Width="305" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFE3E3E3" Icon="/Sistema;component/Images/icone.png">
+    <Grid>
+        <TextBlock Height="93" HorizontalAlignment="Stretch" Name="textBlock1" Text="" VerticalAlignment="Top" FontSize="32" TextAlignment="Center" Margin="78,-6,77,0"><TextBlock.Background><ImageBrush ImageSource="/Sistema;component/Images/icone.png" /></TextBlock.Background></TextBlock>
+        <TextBox Height="24" HorizontalAlignment="Stretch" Margin="45,85,37,0" Name="txtUsuario" VerticalAlignment="Top" />
+        <PasswordBox Height="23" HorizontalAlignment="Stretch" Margin="45,135,37,0" Name="pbSenha" VerticalAlignment="Top" />
+        <Label Content="Usuário" Height="28" HorizontalAlignment="Left" Margin="41,65,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Senha" Height="28" HorizontalAlignment="Left" Margin="41,115,0,0" Name="label2" VerticalAlignment="Top" />
+        <Button Content="Login" Height="23" HorizontalAlignment="Stretch" Margin="45,186,37,0" Name="btLogin" VerticalAlignment="Top" Click="btLogin_Click" />
+    </Grid>
+</Window>

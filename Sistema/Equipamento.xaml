@@ -1,0 +1,26 @@
+﻿<Window x:Class="Sistema.Equipamento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MH acesso - GE1.0 - Equipamento | Dados Gerais" Height="347" Width="420" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFE3E3E3" Icon="/Sistema;component/Images/icone.png">
+    <Grid VerticalAlignment="Stretch">
+        <DataGrid AutoGenerateColumns="False" Height="259" HorizontalAlignment="Stretch"  ItemsSource="{Binding Path=equipamentoDataBinding}" Margin="93,41,12,0" Name="dtgEquipamento" VerticalAlignment="Top" Loaded="dtgEquipamento_Loaded" SelectedCellsChanged="dtgEquipamento_SelectedCellsChanged" Background="#FFF0F0F0">
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=codigo_equipamento}" Header="Codigo" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=descricao}" Header="Equipamento" Width="152" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=Categoria}" Header="Categoria" Width="152" IsReadOnly="True"  />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Cancelar" Height="23" Margin="12,129,0,0" Name="btCancelar" VerticalAlignment="Top" Click="btCancelar_Click" HorizontalAlignment="Left" Width="73" />
+        <Button Content="Excluir" Height="23" HorizontalAlignment="Left" Margin="12,100,0,0" Name="btExcluir" VerticalAlignment="Top" Width="73" IsEnabled="False" Click="btExcluir_Click"  />
+        <Button Content="Incluir" Height="23" HorizontalAlignment="Left" Margin="12,42,0,0" Name="btIncluir" VerticalAlignment="Top" Width="73" Click="btIncluir_Click"/>
+        <Button Content="Consultar" Height="23" HorizontalAlignment="Left" Margin="12,71,0,0" Name="btConsultar" VerticalAlignment="Top" Width="73" IsEnabled="False" Click="btConsultar_Click"  />
+        <TextBlock Background="#FFFF9F07" FontFamily="Verdana" FontSize="16" Foreground="#FF2E2E2E" Height="22" HorizontalAlignment="Stretch" Name="textBlock1" Text=" Equipamento | Dados Gerais" VerticalAlignment="Top" />
+    </Grid>
+</Window>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="Sistema.ListaConsultaEqptEstoque"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="" Height="321" Width="480" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFE3E3E3" Icon="/Sistema;component/Images/icone.png">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" Height="213" HorizontalAlignment="Stretch" Margin="89,57,13,0" Name="dtgListaEqpt" VerticalAlignment="Top" ItemsSource="{Binding Path=listaEqptDataBinding}" Loaded="dtgListaEqpt_Loaded" SelectedCellsChanged="dtgListaEqpt_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=codigo_estoque}" Header="Codigo" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=nrSerie}" Header="Numero de Serie" Width="110" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=modelo}" Header="Modelo" Width="110" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=localizacao}" Header="Localização" Width="110" IsReadOnly="True"  />
+
+            </DataGrid.Columns>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+            <DataGrid.RowBackground>
+                <SolidColorBrush />
+            </DataGrid.RowBackground>
+        </DataGrid>
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Left" Margin="11,87,0,0" Name="btCancelar" VerticalAlignment="Top" Width="75" Click="btCancelar_Click" />
+        <Button Content="Editar" Height="23" HorizontalAlignment="Left" Margin="11,58,0,0" Name="btEditar" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btEditar_Click" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="89,28,0,0" Name="cbFiltro" VerticalAlignment="Top" Width="102" >
+            <ComboBoxItem Content="Tipo de Busca:" IsEnabled="False" IsSelected="True" />
+            <ComboBoxItem Content="Nº de Serie" />
+            <ComboBoxItem Content="Modelo" />
+            <ComboBoxItem Content="Localização" />
+
+        </ComboBox>
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="197,28,13,0" Name="txtPesquisa" VerticalAlignment="Top" TextChanged="txtPesquisa_TextChanged" />
+        <TextBlock Background="#FFFF9F07" FontFamily="Verdana" FontSize="16" Foreground="#FF2E2E2E" Height="22" HorizontalAlignment="Stretch" Name="textBlock1" Text=" Lista de Equipamento | Editar" VerticalAlignment="Top" />
+    </Grid>
+</Window>

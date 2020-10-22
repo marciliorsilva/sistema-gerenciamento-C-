@@ -1,0 +1,48 @@
+﻿<Window x:Class="Sistema.RelatorioPecas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MH acesso - GE1.0 - Historico do Estoque de Peças" Height="531" Width="666" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/Sistema;component/Images/icone.png">
+    <Grid>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="14,36,0,0" Name="cbTipo" VerticalAlignment="Top" Width="110" SelectionChanged="cbTipo_SelectionChanged">
+            <ComboBoxItem Content="Tipo" IsEnabled="False" IsSelected="True" />
+            <ComboBoxItem Content="Entrada" />
+            <ComboBoxItem Content="Saída" />
+        </ComboBox>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="130,36,0,0" Name="cbFiltro" VerticalAlignment="Top" Width="110" IsEnabled="False">
+            <ComboBoxItem Content="Tipo de Busca:" IsEnabled="False" IsSelected="True" />
+
+        </ComboBox>
+
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="246,36,12,0" Name="txtPesquisa" VerticalAlignment="Top" TextChanged="txtPesquisa_TextChanged" />
+        <DataGrid AutoGenerateColumns="False" CanUserResizeRows="False" ItemsSource="{Binding Path=relatorioDataBinding}" Height="369" HorizontalAlignment="Stretch" Margin="14,65,12,0" Name="dtgRelatorioPecas" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=DataEntrada}" Header="Data de Entrada" Width="125" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=Pecas}" Header="Peça" Width="125" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=quantidade}" Header="Quantidade" Width="112" IsReadOnly="True" Visibility="Hidden"  />
+                <DataGridTextColumn Binding="{Binding Path=valorUni}" Header="Valor Unitário" Width="112" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=Fornecedor}" Header="Fornecedor" Width="111" IsReadOnly="True" Visibility="Hidden"  />
+                <DataGridTextColumn Binding="{Binding Path=localizacao}" Header="Localização" IsReadOnly="True" Width="111" Visibility="Hidden"  />
+
+                <DataGridTextColumn Binding="{Binding Path=DataSaida}" Header="Data de Saída" Width="100" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=descricao}" Header="Peça" Width="100" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=qtdeSaida}" Header="Quantidade" Width="100" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=motivo}" Header="Motivo" Width="120" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=Nome}" Header="Cliente" Width="100" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=observacao}" Header="Observação" Width="120" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=Usuario}" Header="Usuário" Width="120" IsReadOnly="True" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=reposicao}" Header="Repôs ao Estoque" Width="130" IsReadOnly="True" Visibility="Hidden" />
+            </DataGrid.Columns>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+            <DataGrid.RowBackground>
+                <SolidColorBrush />
+            </DataGrid.RowBackground>
+        </DataGrid>
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Right" Margin="0,0,12,12" Name="btCancelar" VerticalAlignment="Bottom" Width="75" Click="btCancelar_Click" />
+        <TextBlock Background="#FFFF9F07" FontFamily="Verdana" FontSize="16" Foreground="#FF2E2E2E" Height="22" HorizontalAlignment="Stretch" Name="textBlock1" Text=" Histórico do Estoque de Peças" VerticalAlignment="Top" />
+    </Grid>
+</Window>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="Sistema.ListaConsultaEqptEstoque"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListaConsultaEqptEstoque" Height="317" Width="382" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" Margin="12,41,0,0" Name="dtgListaEqpt" VerticalAlignment="Top" ItemsSource="{Binding Path=listaEqptDataBinding}" Width="336" Loaded="dtgListaEqpt_Loaded" SelectedCellsChanged="dtgListaEqpt_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=codigo_estoque}" Header="Codigo" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=nrSerie}" Header="Numero de Serie" Width="110" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=modelo}" Header="Modelo" Width="110" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=localizacao}" Header="Localização" Width="110" IsReadOnly="True"  />
+
+            </DataGrid.Columns>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+            <DataGrid.RowBackground>
+                <SolidColorBrush />
+            </DataGrid.RowBackground>
+        </DataGrid>
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Left" Margin="273,248,0,0" Name="btCancelar" VerticalAlignment="Top" Width="75" Click="btCancelar_Click" />
+        <Button Content="Editar" Height="23" HorizontalAlignment="Left" Margin="192,248,0,0" Name="btEditar" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btEditar_Click" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="cbFiltro" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="138,12,0,0" Name="txtPesquisa" VerticalAlignment="Top" Width="210" />
+        <Button Content="Adicionar" Height="23" HorizontalAlignment="Left" Margin="12,248,0,0" Name="btAddEqptCli" VerticalAlignment="Top" Width="75" Opacity="0" Click="btAddEqptCli_Click" />
+    </Grid>
+</Window>

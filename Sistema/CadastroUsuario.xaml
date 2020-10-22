@@ -1,0 +1,43 @@
+﻿<Window x:Class="Sistema.CadastroUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MH acesso - GE1.0 - Cadastro de Usuário" Height="515" Width="312" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFE3E3E3" Icon="/Sistema;component/Images/icone.png">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="12,56,12,0" Name="txtNome" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Stretch" Margin="12,143,12,0" Name="cbTipoAcesso" VerticalAlignment="Top">
+            <ComboBoxItem Content="Administrador" />
+            <ComboBoxItem Content="Usuário" />
+        </ComboBox>
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="12,191,12,0" Name="txtUsuario" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="12,98,12,0" Name="txtFuncao" VerticalAlignment="Top" />
+        <DataGrid AutoGenerateColumns="False" CanUserResizeRows="False" ItemsSource="{Binding Path=usuarioDataBinding}" Height="120" HorizontalAlignment="Stretch" Margin="12,311,12,0" Name="dtgUsuario" VerticalAlignment="Top" Loaded="dtgUsuario_Loaded" SelectedCellsChanged="dtgUsuario_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=codigo_usuario}" Header="Codigo" Visibility="Hidden" />
+                <DataGridTextColumn Binding="{Binding Path=nome}" Header="Nome" Width="100" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=cargo}" Header="Função" Width="100" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Path=tipo}" Header="Tipo de Acesso" Width="100" IsReadOnly="True"  />
+            </DataGrid.Columns>
+            <DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.HorizontalGridLinesBrush>
+            <DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush />
+            </DataGrid.VerticalGridLinesBrush>
+            <DataGrid.RowBackground>
+                <SolidColorBrush />
+            </DataGrid.RowBackground>
+        </DataGrid>
+        <Button Content="Editar" Height="23" HorizontalAlignment="Left" Margin="105,273,0,0" Name="btEditar" VerticalAlignment="Top" IsEnabled="False" Click="btEditar_Click" Width="88" />
+        <Button Content="Cadastrar" Height="23" HorizontalAlignment="Left" Margin="12,273,0,0" Name="btCadastrar" VerticalAlignment="Top" Width="87" Click="btCadastrar_Click" />
+        <Label Content="Nome" Height="28" HorizontalAlignment="Left" Margin="9,36,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Função" Height="28" HorizontalAlignment="Left" Margin="9,77,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="Tipo de Acesso" Height="28" HorizontalAlignment="Left" Margin="9,123,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="Usuário" Height="28" HorizontalAlignment="Left" Margin="8,171,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="12,232,12,0" Name="txtSenha" VerticalAlignment="Top" />
+        <Label Content="Senha" Height="28" HorizontalAlignment="Left" Margin="9,211,0,0" Name="label5" VerticalAlignment="Top" />
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Right" Margin="0,0,12,12" Name="btCancelar" VerticalAlignment="Bottom" Width="75" Click="btCancelar_Click" />
+        <Label Content="Todos os campos são obrigatório." Height="28" HorizontalAlignment="Right" Margin="0,22,8,0" Name="label6" VerticalAlignment="Top" Foreground="#FFFF9F07" FontSize="10" />
+        <TextBlock Background="#FFFF9F07" FontFamily="Verdana" FontSize="16" Foreground="#FF2E2E2E" Height="22" HorizontalAlignment="Stretch" Name="textBlock1" Text=" Usuário |  Incluir - Editar" VerticalAlignment="Top" />
+        <Button Content="Excluir" Height="23" HorizontalAlignment="Left" Margin="199,273,0,0" Name="btExcluir" VerticalAlignment="Top" Width="79" IsEnabled="False" Click="btExcluir_Click" />
+    </Grid>
+</Window>

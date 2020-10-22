@@ -1,0 +1,55 @@
+﻿<Window x:Class="Sistema.ordemServicoSaida"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ordemServicoSaida" Height="759" Width="597" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,30,0,0" Name="txtCodigoOs" VerticalAlignment="Top" Width="120" IsEnabled="False" />
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="138,30,0,0" Name="dpDataEntrada" VerticalAlignment="Top" Width="115" />
+        <TextBox Height="43" HorizontalAlignment="Stretch" Margin="12,293,12,0" Name="txtDiagLaudo" VerticalAlignment="Top" IsEnabled="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" />
+        <Button Content="Cadastrar" Height="23" HorizontalAlignment="Right" Margin="0,0,176,12" Name="button1" VerticalAlignment="Bottom" Width="75" />
+        <Button Content="Editar" Height="23" HorizontalAlignment="Right" Margin="0,0,95,12" Name="button2" VerticalAlignment="Bottom" Width="75" IsEnabled="False" />
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Right" Margin="0,0,11,12" Name="button3" VerticalAlignment="Bottom" Width="78" />
+        <Button Content="Gerar Impressão" Height="23" HorizontalAlignment="Left" Margin="13,0,0,12" Name="btImpressao" VerticalAlignment="Bottom" Width="101" IsEnabled="True" />
+        <TextBox Height="40" HorizontalAlignment="Stretch" Margin="12,354,12,0" Name="txtObs" VerticalAlignment="Top" IsEnabled="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" />
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="259,30,11,0" Name="txtCliente" VerticalAlignment="Top" IsEnabled="False" />
+        <Label Content="Cliente" Height="28" HorizontalAlignment="Left" Margin="255,10,0,0" VerticalAlignment="Top" Name="label" />
+        <Label Content="Codigo" Height="28" HorizontalAlignment="Left" Margin="9,10,0,0" VerticalAlignment="Top" />
+        <Label Content="Data de Saída" Height="28" HorizontalAlignment="Left" Margin="133,10,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Equipamento" Height="28" HorizontalAlignment="Left" Margin="9,55,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="Diagnóstico / Laudo" Height="28" HorizontalAlignment="Left" Margin="9,273,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="Observação da saida" Height="28" HorizontalAlignment="Left" Margin="9,334,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="12,77,12,0" Name="txtEquipamento" VerticalAlignment="Top" IsEnabled="False" />
+        <GroupBox Header="Informações da Entrada" Height="170" HorizontalAlignment="Stretch" Margin="12,106,11,0" Name="groupBox1" VerticalAlignment="Top" IsEnabled="False">
+            <Grid>
+                <Label Content="Defeito" Height="28" HorizontalAlignment="Left" Name="label5" VerticalAlignment="Top" Margin="3,-1,0,0" />
+                <TextBox HorizontalAlignment="Stretch" Margin="6,20,6,0" Name="txtDefeitoEntrada" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Height="49" VerticalAlignment="Top" />
+                <Label Content="Observação" Height="28" HorizontalAlignment="Left" Margin="2,65,0,0" Name="label6" VerticalAlignment="Top" />
+                <TextBox Height="47" HorizontalAlignment="Stretch" Margin="6,86,6,0" Name="txtObsEntrada" VerticalAlignment="Top" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" AcceptsReturn="True" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Serviços" Height="266" HorizontalAlignment="Left" Margin="13,392,0,0" Name="groupBox2" VerticalAlignment="Top" Width="274">
+            <Grid>
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="6,22,0,0" Name="textBox1" VerticalAlignment="Top" Width="250" />
+                <Label Content="Descrição" Height="28" HorizontalAlignment="Left" Name="label7" VerticalAlignment="Top" Margin="2,1,0,0" />
+                <Label Content="Valor" Height="28" HorizontalAlignment="Left" Margin="1,40,0,0" Name="label8" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="6,60,0,0" Name="textBox2" VerticalAlignment="Top" Width="108" />
+                <Button Content="Adicionar" Height="23" HorizontalAlignment="Left" Margin="12,214,0,0" Name="btAddServico" VerticalAlignment="Top" Width="75" />
+                <ListBox Height="119" HorizontalAlignment="Left" Margin="9,89,0,0" Name="listServicos" VerticalAlignment="Top" Width="247">
+                   
+                </ListBox>
+                <Button Content="Editar" Height="23" HorizontalAlignment="Left" Margin="93,214,0,0" Name="btEditarServico" VerticalAlignment="Top" Width="75" />
+                <Button Content="Excluir" Height="23" HorizontalAlignment="Left" Margin="174,214,0,0" Name="btExcluirServico" VerticalAlignment="Top" Width="75" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Produtos" Height="259" HorizontalAlignment="Right" Margin="0,393,6,0" Name="groupBox3" VerticalAlignment="Top" Width="272">
+            <Grid>
+                <Button Content="Adicionar" Height="23" HorizontalAlignment="Left" Margin="6,131,0,0" Name="btAddPeca" VerticalAlignment="Top" Width="75" Click="btAddPeca_Click" />
+                <ListBox HorizontalAlignment="Left" Margin="4,8,0,0" Name="listProdutos" Width="248" Height="117" VerticalAlignment="Top" />
+                <Button Content="Editar" Height="23" HorizontalAlignment="Left" Margin="90,131,0,0" Name="btEditarPeca" VerticalAlignment="Top" Width="75" Click="btEditarPeca_Click" />
+                <Button Content="Excluir" Height="23" HorizontalAlignment="Left" Margin="174,131,0,0" Name="btExcluirPeca" VerticalAlignment="Top" Width="75" />
+            </Grid>
+        </GroupBox>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="13,658,0,0" Name="txtLinha" VerticalAlignment="Top" Width="24" Visibility="Hidden" />
+    </Grid>
+
+</Window>

@@ -1,0 +1,55 @@
+﻿<Window x:Class="Sistema.NovoConsultarAtendimento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MH acesso - GE1.0 -  Atendimento | Incluir - Editar" Height="530" Width="478" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFE3E3E3" Icon="/Sistema;component/Images/icone.png">
+    <Grid>
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="12,45,0,0" Name="dpData" VerticalAlignment="Top" Width="115" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="133,45,0,0" Name="txtHora" VerticalAlignment="Top" Width="84" />
+        <ComboBox Height="23" HorizontalAlignment="Stretch" Margin="223,45,12,0" Name="cbMotivo" VerticalAlignment="Top">
+            <ComboBoxItem Content="Dúvida" />
+            <ComboBoxItem Content="Cobrança" />
+            <ComboBoxItem Content="Visita Técnica" />
+            <ComboBoxItem Content="Problema no Equipamento" />
+            <ComboBoxItem Content="Suporte" />
+            <ComboBoxItem Content="Reclamação" />
+            <ComboBoxItem Content="Solicitação" />
+            <ComboBoxItem Content="Informação" />
+            <ComboBoxItem Content="Treinamento" />
+            <ComboBoxItem Content="Instalação" />
+            <ComboBoxItem Content="Sistema Secullum" />
+        </ComboBox>
+        <GroupBox Header="Informaçõe sobre o Atendimento" Height="288" HorizontalAlignment="Stretch" Margin="5,160,11,0" Name="groupBox1" VerticalAlignment="Top">
+            <Grid>
+                <TextBox Height="58" HorizontalAlignment="Stretch" Margin="6,20,6,0" Name="txtDescricao" VerticalAlignment="Top" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" AcceptsReturn="True" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="6,94,0,0" Name="cbSituacao" VerticalAlignment="Top" Width="169" SelectionChanged="cbSituacao_SelectionChanged">
+                    <ComboBoxItem Content="Aberto" />
+                    <ComboBoxItem Content="Aguardando cliente" />
+                    <ComboBoxItem Content="Resolvido" />
+                    <ComboBoxItem Content="Cancelado" />
+                </ComboBox>
+                <DatePicker Height="23" HorizontalAlignment="Left" Margin="181,94,0,0" Name="dpResolvido" VerticalAlignment="Top" Width="151" IsEnabled="False" />
+                <TextBox Height="23" HorizontalAlignment="Stretch" Margin="7,136,6,0" Name="txtResolvidoPor" VerticalAlignment="Top" IsEnabled="False" />
+                <Label Content="Descrição do Motivo" Height="28" HorizontalAlignment="Left" Name="label5" VerticalAlignment="Top" />
+                <Label Content="Situação" Height="28" HorizontalAlignment="Left" Margin="4,73,0,0" Name="label6" VerticalAlignment="Top" />
+                <Label Content="Resolvido em" Height="28" HorizontalAlignment="Left" Margin="177,73,0,0" Name="label7" VerticalAlignment="Top" />
+                <Label Content="Resolvido por" Height="28" HorizontalAlignment="Left" Margin="4,114,0,0" Name="label8" VerticalAlignment="Top" />
+                <TextBox Height="82" HorizontalAlignment="Stretch" Margin="7,176,6,0" Name="txtConclusao" VerticalAlignment="Top" IsEnabled="False" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" />
+                <Label Content="Conclusão" Height="28" HorizontalAlignment="Left" Margin="3,155,0,0" Name="label1" VerticalAlignment="Top" />
+                <Label Content="Hora" Height="28" HorizontalAlignment="Left" Margin="334,73,0,0" Name="label2" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Stretch" Margin="338,94,6,0" Name="txtHoraResolvido" VerticalAlignment="Top" IsEnabled="False" />
+            </Grid>
+        </GroupBox>
+        <Button Content="Cancelar" Height="23" HorizontalAlignment="Stretch" Margin="358,0,12,9" Name="btCancelar" VerticalAlignment="Bottom" Width="75" Click="btCancelar_Click" />
+        <Label Content="Data" Height="28" HorizontalAlignment="Left" Margin="7,25,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="Hora" Height="28" HorizontalAlignment="Left" Margin="130,25,0,0" Name="label4" VerticalAlignment="Top" />
+        <Label Content="Cliente" Height="28" HorizontalAlignment="Left" Margin="9,69,0,0" Name="label9" VerticalAlignment="Top" />
+        <Label Content="Motivo" Height="28" HorizontalAlignment="Left" Margin="218,25,0,0" Name="label10" VerticalAlignment="Top" />
+        <Button Content="Cadastrar" Height="23" HorizontalAlignment="Stretch" Margin="198,0,176,9" Name="btCadastrar" VerticalAlignment="Bottom" Width="75" Click="btCadastrar_Click" />
+        <Button Content="Editar" Height="23" HorizontalAlignment="Stretch" Margin="280,0,95,9" Name="btEditar" VerticalAlignment="Bottom" Width="75" Click="btEditar_Click" />
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="12,131,12,0" Name="txtContato" VerticalAlignment="Top" />
+        <Label Content="Contato/Telefone" Height="28" HorizontalAlignment="Left" Margin="8,109,0,0" Name="label11" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="14,89,0,0" Name="txtCliente" VerticalAlignment="Top" Width="341" />
+        <Button Content="Procurar" Height="23" HorizontalAlignment="Stretch" Margin="360,88,12,0" Name="btPesquisaCli" VerticalAlignment="Top" Width="78" Click="btPesquisaCli_Click" />
+        <TextBlock Background="#FFFF9F07" FontFamily="Verdana" FontSize="16" Foreground="#FF2E2E2E" Height="22" HorizontalAlignment="Stretch" Name="textBlock1" Text=" Atendimento | Incluir - Editar" VerticalAlignment="Top" />
+    </Grid>
+</Window>
